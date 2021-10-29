@@ -1,0 +1,23 @@
+.*
+!.gitignore
+!.editorconfig
+
+# Java files
+*.class
+*.jar
+
+# Maven files
+target/
+dependency-reduced-pom.xml
+
+# IntelliJ IDEA files
+*.iml
+!.idea
+.idea/dictionaries/
+.idea/libraries/
+.idea/jarRepositories.xml
+.idea/uiDesigner.xml
+.idea/modules.xml
+
+# GitHub files
+!.github
