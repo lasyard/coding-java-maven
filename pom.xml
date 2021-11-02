@@ -43,6 +43,7 @@
 
     <modules>
         <module>quiz</module>
+        <module>jackson</module>
     </modules>
 
     <properties>
@@ -50,6 +51,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- jackson -->
+        <jackson.version>2.13.0</jackson.version>
+        <!-- json schema -->
+        <jsonschema-generator.version>4.20.0</jsonschema-generator.version>
         <!-- facilities -->
         <lombok.version>1.18.22</lombok.version>
         <!-- testing -->
@@ -63,10 +68,49 @@
         <logback.version>1.2.6</logback.version>
         <!-- plugins -->
         <maven-checkstyle.version>3.1.2</maven-checkstyle.version>
+        <!-- this is crucial for junit5, older versions does not work. -->
+        <maven-surefire.version>3.0.0-M5</maven-surefire.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-afterburner</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!-- json schema -->
+            <dependency>
+                <groupId>com.github.victools</groupId>
+                <artifactId>jsonschema-generator</artifactId>
+                <version>${jsonschema-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.victools</groupId>
+                <artifactId>jsonschema-module-jackson</artifactId>
+                <version>${jsonschema-generator.version}</version>
+            </dependency>
             <!-- facilities -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -77,6 +121,11 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
+                <version>${junit5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
                 <version>${junit5.version}</version>
             </dependency>
             <dependency>
@@ -158,6 +207,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${maven-checkstyle.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

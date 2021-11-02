@@ -1,0 +1,12 @@
+{
+  "animals": [
+    {
+      "type": "dog",
+      "name": "Goofy"
+    },
+    {
+      "type": "cat",
+      "name": "Tom"
+    }
+  ]
+}
