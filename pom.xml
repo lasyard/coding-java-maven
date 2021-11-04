@@ -45,6 +45,7 @@
         <module>quiz</module>
         <module>jackson</module>
         <module>props</module>
+        <module>hadoop-wc</module>
     </modules>
 
     <properties>
@@ -52,6 +53,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- hadoop -->
+        <hadoop.version>3.3.1</hadoop.version>
         <!-- spring -->
         <spring.version>5.3.12</spring.version>
         <!-- jackson -->
@@ -77,10 +80,17 @@
         <maven-checkstyle.version>3.1.2</maven-checkstyle.version>
         <!-- this is crucial for junit5, older versions does not work. -->
         <maven-surefire.version>3.0.0-M5</maven-surefire.version>
+        <maven-jar.version>3.2.0</maven-jar.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- hadoop -->
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-client</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
             <!-- spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -246,6 +256,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven-surefire.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
