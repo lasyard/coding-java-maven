@@ -10,6 +10,7 @@
         <module name="quiz" />
         <module name="jackson" />
         <module name="hadoop-wc" />
+        <module name="serdes" />
         <module name="props" />
       </profile>
     </annotationProcessing>

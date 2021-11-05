@@ -1,0 +1,18 @@
+{
+    "namespace": "io.github.lasyard.serdes",
+    "type": "record",
+    "name": "User",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "score",
+            "type": [
+                "int",
+                "null"
+            ]
+        }
+    ]
+}
