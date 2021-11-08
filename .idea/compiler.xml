@@ -13,6 +13,7 @@
         <module name="serdes" />
         <module name="opencsv" />
         <module name="hadoop-io" />
+        <module name="js" />
         <module name="props" />
       </profile>
     </annotationProcessing>

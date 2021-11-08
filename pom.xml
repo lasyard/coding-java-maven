@@ -49,6 +49,7 @@
         <module>serdes</module>
         <module>opencsv</module>
         <module>hadoop-io</module>
+        <module>js</module>
     </modules>
 
     <properties>
