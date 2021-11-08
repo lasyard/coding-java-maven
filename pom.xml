@@ -47,6 +47,7 @@
         <module>props</module>
         <module>hadoop-wc</module>
         <module>serdes</module>
+        <module>opencsv</module>
     </modules>
 
     <properties>
@@ -62,6 +63,8 @@
         <jackson.version>2.13.0</jackson.version>
         <!-- json schema -->
         <jsonschema-generator.version>4.20.0</jsonschema-generator.version>
+        <!-- opencsv -->
+        <opencsv.version>5.5.2</opencsv.version>
         <!-- avro -->
         <avro.version>1.11.0</avro.version>
         <!-- kryo -->
@@ -143,6 +146,12 @@
                 <groupId>com.github.victools</groupId>
                 <artifactId>jsonschema-module-jackson</artifactId>
                 <version>${jsonschema-generator.version}</version>
+            </dependency>
+            <!-- opencsv -->
+            <dependency>
+                <groupId>com.opencsv</groupId>
+                <artifactId>opencsv</artifactId>
+                <version>${opencsv.version}</version>
             </dependency>
             <!-- avro -->
             <dependency>

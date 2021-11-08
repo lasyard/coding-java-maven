@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="quiz" />
+        <module name="opencsv" />
         <module name="jackson" />
         <module name="hadoop-wc" />
         <module name="serdes" />
