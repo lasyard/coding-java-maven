@@ -51,6 +51,7 @@
         <module>hadoop-io</module>
         <module>js</module>
         <module>i18n</module>
+        <module>flink-dataset</module>
     </modules>
 
     <properties>
@@ -60,6 +61,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <!-- hadoop -->
         <hadoop.version>3.3.1</hadoop.version>
+        <!-- flink -->
+        <flink.version>1.14.0</flink.version>
         <!-- spring -->
         <spring.version>5.3.12</spring.version>
         <!-- jackson -->
@@ -76,6 +79,7 @@
         <commons-configuration.version>1.10</commons-configuration.version>
         <commons-configuration2.version>2.7</commons-configuration2.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-io.version>2.11.0</commons-io.version>
         <!-- facilities -->
         <lombok.version>1.18.22</lombok.version>
         <!-- testing -->
@@ -103,6 +107,12 @@
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-client</artifactId>
                 <version>${hadoop.version}</version>
+            </dependency>
+            <!-- flink -->
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-java</artifactId>
+                <version>${flink.version}</version>
             </dependency>
             <!-- spring -->
             <dependency>
@@ -185,6 +195,11 @@
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons-beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
             </dependency>
             <!-- facilities -->
             <dependency>
