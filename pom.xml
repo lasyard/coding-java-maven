@@ -54,6 +54,7 @@
         <module>flink-dataset</module>
         <module>flink-streaming</module>
         <module>antlr4-array-init</module>
+        <module>antlr4-simple-expr</module>
     </modules>
 
     <properties>

@@ -8,17 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="quiz" />
-        <module name="jackson" />
-        <module name="hadoop-wc" />
-        <module name="serdes" />
-        <module name="antlr4-array-init" />
+        <module name="antlr4-simple-expr" />
         <module name="opencsv" />
         <module name="hadoop-io" />
         <module name="js" />
         <module name="flink-streaming" />
-        <module name="flink-dataset" />
         <module name="i18n" />
         <module name="props" />
+        <module name="jackson" />
+        <module name="hadoop-wc" />
+        <module name="serdes" />
+        <module name="antlr4-array-init" />
+        <module name="flink-dataset" />
       </profile>
     </annotationProcessing>
   </component>

@@ -21,3 +21,7 @@ dependency-reduced-pom.xml
 
 # GitHub files
 !.github
+
+# Antlr4 files
+*.tokens
+gen/
