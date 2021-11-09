@@ -11,6 +11,7 @@
         <module name="jackson" />
         <module name="hadoop-wc" />
         <module name="serdes" />
+        <module name="antlr4-array-init" />
         <module name="opencsv" />
         <module name="hadoop-io" />
         <module name="js" />
