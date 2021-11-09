@@ -13,24 +13,20 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>flink-dataset</artifactId>
+    <artifactId>flink-streaming</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <!-- flink -->
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-java</artifactId>
+            <artifactId>flink-streaming-java_2.12</artifactId>
+            <version>${flink.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-clients_2.12</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <!-- apache commons -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
         </dependency>
     </dependencies>
 
@@ -42,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>io.github.lasyard.flink.dataset.FlinkDataSet</mainClass>
+                            <mainClass>io.github.lasyard.flink.streaming.FlinkStreamingSocket</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
