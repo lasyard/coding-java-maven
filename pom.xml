@@ -55,6 +55,7 @@
         <module>flink-streaming</module>
         <module>antlr4-array-init</module>
         <module>antlr4-simple-expr</module>
+        <module>utils</module>
     </modules>
 
     <properties>
@@ -85,11 +86,13 @@
         <commons-configuration2.version>2.7</commons-configuration2.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-io.version>2.11.0</commons-io.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
         <!-- facilities -->
         <lombok.version>1.18.22</lombok.version>
         <!-- testing -->
         <junit5.version>5.8.1</junit5.version>
         <assertj.version>3.21.0</assertj.version>
+        <mockito.version>4.0.0</mockito.version>
         <!-- static check -->
         <jsr305.version>3.0.2</jsr305.version>
         <checkstyle.version>9.0.1</checkstyle.version>
@@ -223,6 +226,11 @@
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
             <!-- facilities -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -244,6 +252,11 @@
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
             </dependency>
             <!-- static check -->
             <dependency>

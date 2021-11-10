@@ -19,6 +19,7 @@
         <module name="hadoop-wc" />
         <module name="serdes" />
         <module name="antlr4-array-init" />
+        <module name="utils" />
         <module name="flink-dataset" />
       </profile>
     </annotationProcessing>
