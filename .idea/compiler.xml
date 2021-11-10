@@ -15,12 +15,15 @@
         <module name="flink-streaming" />
         <module name="i18n" />
         <module name="props" />
+        <module name="annotation-runtime" />
         <module name="jackson" />
         <module name="hadoop-wc" />
         <module name="serdes" />
         <module name="antlr4-array-init" />
         <module name="utils" />
+        <module name="annotation-process" />
         <module name="flink-dataset" />
+        <module name="annotation-processor" />
       </profile>
     </annotationProcessing>
   </component>

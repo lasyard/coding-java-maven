@@ -56,6 +56,9 @@
         <module>antlr4-array-init</module>
         <module>antlr4-simple-expr</module>
         <module>utils</module>
+        <module>annotation-processor</module>
+        <module>annotation-process</module>
+        <module>annotation-runtime</module>
     </modules>
 
     <properties>
@@ -89,6 +92,8 @@
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <!-- facilities -->
         <lombok.version>1.18.22</lombok.version>
+        <auto-service.version>1.0.1</auto-service.version>
+        <javapoet.version>1.13.0</javapoet.version>
         <!-- testing -->
         <junit5.version>5.8.1</junit5.version>
         <assertj.version>3.21.0</assertj.version>
@@ -237,6 +242,16 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.auto.service</groupId>
+                <artifactId>auto-service</artifactId>
+                <version>${auto-service.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup</groupId>
+                <artifactId>javapoet</artifactId>
+                <version>${javapoet.version}</version>
+            </dependency>
             <!-- testing -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
@@ -279,6 +294,12 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
+            </dependency>
+            <!-- this project -->
+            <dependency>
+                <groupId>io.github.lasyard</groupId>
+                <artifactId>annotation-processor</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
