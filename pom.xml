@@ -60,6 +60,7 @@
         <module>annotation-process</module>
         <module>annotation-runtime</module>
         <module>hadoop-notify</module>
+        <module>zookeeper-watcher</module>
     </modules>
 
     <properties>
@@ -69,6 +70,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <!-- hadoop -->
         <hadoop.version>3.3.1</hadoop.version>
+        <!-- zookeeper -->
+        <zookeeper.version>3.7.0</zookeeper.version>
         <!-- flink -->
         <flink.version>1.14.0</flink.version>
         <!-- spring -->
@@ -121,6 +124,18 @@
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-client</artifactId>
                 <version>${hadoop.version}</version>
+            </dependency>
+            <!-- zookeeper -->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!-- flink -->
             <dependency>
