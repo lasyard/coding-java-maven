@@ -59,6 +59,7 @@
         <module>annotation-processor</module>
         <module>annotation-process</module>
         <module>annotation-runtime</module>
+        <module>hadoop-notify</module>
     </modules>
 
     <properties>

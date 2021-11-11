@@ -22,6 +22,7 @@
         <module name="antlr4-array-init" />
         <module name="utils" />
         <module name="annotation-process" />
+        <module name="hadoop-notify" />
         <module name="flink-dataset" />
         <module name="annotation-processor" />
       </profile>
