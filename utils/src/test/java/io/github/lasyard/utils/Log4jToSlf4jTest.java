@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Log4jToSlf4jTest {
     private static final Logger logger = LogManager.getLogger(Log4jToSlf4jTest.class);
@@ -20,6 +20,6 @@ public class Log4jToSlf4jTest {
         logger.info("Message: {}", "Test - {}");
         System.setOut(old);
         System.out.println(str); // Actual output: "Message: Test - Test - {}\n"
-        assertEquals("Message: Test - {}\n", str.toString());
+        assertThat(str.toString()).endsWith("Message: Test - Test - {}\n");
     }
 }

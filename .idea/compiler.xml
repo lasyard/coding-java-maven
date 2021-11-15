@@ -25,6 +25,7 @@
         <module name="annotation-process" />
         <module name="hadoop-notify" />
         <module name="flink-dataset" />
+        <module name="hbase-io" />
         <module name="annotation-processor" />
         <module name="zookeeper-watcher" />
       </profile>
