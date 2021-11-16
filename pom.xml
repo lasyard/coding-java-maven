@@ -63,6 +63,7 @@
         <module>zookeeper-watcher</module>
         <module>curator-leader</module>
         <module>hbase-io</module>
+        <module>spark-app</module>
     </modules>
 
     <properties>
@@ -80,6 +81,8 @@
         <curator.version>5.2.0</curator.version>
         <!-- flink -->
         <flink.version>1.14.0</flink.version>
+        <!-- spark -->
+        <spark.version>3.2.0</spark.version>
         <!-- spring -->
         <spring.version>5.3.12</spring.version>
         <!-- antlr4 -->
@@ -183,6 +186,12 @@
                 <groupId>org.apache.flink</groupId>
                 <artifactId>flink-clients_2.12</artifactId>
                 <version>${flink.version}</version>
+            </dependency>
+            <!-- spark -->
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.12</artifactId>
+                <version>${spark.version}</version>
             </dependency>
             <!-- spring -->
             <dependency>

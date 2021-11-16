@@ -38,6 +38,8 @@
     <file url="file://$PROJECT_DIR$/quiz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serdes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serdes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spark-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spark-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/utils/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/utils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zookeeper-watcher/src/main/java" charset="UTF-8" />

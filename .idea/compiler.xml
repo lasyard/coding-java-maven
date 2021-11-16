@@ -17,6 +17,7 @@
         <module name="i18n" />
         <module name="props" />
         <module name="annotation-runtime" />
+        <module name="spark-app" />
         <module name="jackson" />
         <module name="hadoop-wc" />
         <module name="serdes" />
