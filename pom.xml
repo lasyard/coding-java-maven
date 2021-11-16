@@ -65,6 +65,8 @@
         <module>hbase-io</module>
         <module>spark-app</module>
         <module>camel-file</module>
+        <module>flink-cep</module>
+        <module>flink-test-sink</module>
     </modules>
 
     <properties>
@@ -184,11 +186,32 @@
                 <artifactId>flink-streaming-java_2.12</artifactId>
                 <version>${flink.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-cep_2.12</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-connector-kafka_2.12</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
             <!-- in runtime scope, to run flink app locally -->
             <dependency>
                 <groupId>org.apache.flink</groupId>
                 <artifactId>flink-clients_2.12</artifactId>
                 <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-test-utils_2.12</artifactId>
+                <version>${flink.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-slf4j-impl</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!-- spark -->
             <dependency>
@@ -373,6 +396,11 @@
             <dependency>
                 <groupId>io.github.lasyard</groupId>
                 <artifactId>annotation-processor</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lasyard</groupId>
+                <artifactId>flink-test-sink</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
