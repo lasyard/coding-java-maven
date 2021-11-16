@@ -14,6 +14,7 @@
         <module name="hadoop-io" />
         <module name="js" />
         <module name="flink-streaming" />
+        <module name="camel-file" />
         <module name="i18n" />
         <module name="props" />
         <module name="annotation-runtime" />

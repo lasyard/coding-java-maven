@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/antlr4-array-init/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/antlr4-simple-expr/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/antlr4-simple-expr/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/camel-file/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/camel-file/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/curator-leader/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/curator-leader/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-dataset/src/main/java" charset="UTF-8" />
