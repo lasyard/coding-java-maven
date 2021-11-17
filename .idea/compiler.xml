@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="flink-cep" />
+        <module name="flink-sql" />
         <module name="curator-leader" />
         <module name="opencsv" />
         <module name="hadoop-io" />
