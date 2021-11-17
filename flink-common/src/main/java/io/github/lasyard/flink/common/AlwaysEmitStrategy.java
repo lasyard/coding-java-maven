@@ -1,4 +1,4 @@
-package io.github.lasyard.flink.sql;
+package io.github.lasyard.flink.common;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.flink.api.common.eventtime.TimestampAssigner;

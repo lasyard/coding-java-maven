@@ -19,8 +19,10 @@
         <module name="utils" />
         <module name="hadoop-notify" />
         <module name="hbase-io" />
+        <module name="flink-timer" />
         <module name="quiz" />
         <module name="antlr4-simple-expr" />
+        <module name="flink-common" />
         <module name="i18n" />
         <module name="props" />
         <module name="annotation-runtime" />

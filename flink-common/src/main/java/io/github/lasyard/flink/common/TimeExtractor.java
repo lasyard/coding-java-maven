@@ -1,4 +1,4 @@
-package io.github.lasyard.flink.sql;
+package io.github.lasyard.flink.common;
 
 import java.io.Serializable;
 

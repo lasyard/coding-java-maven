@@ -68,6 +68,8 @@
         <module>flink-cep</module>
         <module>flink-test-sink</module>
         <module>flink-sql</module>
+        <module>flink-timer</module>
+        <module>flink-common</module>
     </modules>
 
     <properties>
@@ -407,6 +409,11 @@
             <dependency>
                 <groupId>io.github.lasyard</groupId>
                 <artifactId>annotation-processor</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lasyard</groupId>
+                <artifactId>flink-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

@@ -1,5 +1,6 @@
 package io.github.lasyard.flink.sql;
 
+import io.github.lasyard.flink.common.AlwaysEmitStrategy;
 import io.github.lasyard.flink.test.sink.TestSink;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.api.java.typeutils.RowTypeInfo;
