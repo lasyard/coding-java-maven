@@ -8,21 +8,19 @@ import java.io.File;
 import java.util.ResourceBundle;
 import javax.annotation.Nonnull;
 
+import static org.apache.camel.builder.endpoint.StaticEndpointBuilders.file;
 import static org.apache.camel.test.junit5.TestSupport.deleteDirectory;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Slf4j
-final class Helper {
+final class CamelFileTestUtils {
     private static final ResourceBundle res = ResourceBundle.getBundle("test-camel-file");
-
+    static final String inputDir = res.getString("file.inbox");
+    static final String outputDir = res.getString("file.outbox");
     private static final String testFileName = res.getString("test.file.name");
-    private static final String inputDir = res.getString("file.inbox");
-    static final String fileInputUri = "file:" + inputDir + "?noop=true";
-    private static final String outputDir = res.getString("file.outbox");
-    static final String fileOutputUri = "file:" + outputDir;
 
-    private Helper() {
+    private CamelFileTestUtils() {
     }
 
     static void cleanUp() {
@@ -33,11 +31,11 @@ final class Helper {
     }
 
     static void testCopyFile(@Nonnull CamelTestSupport cts) throws Exception {
-        log.debug("fileInputUri = {}.", fileInputUri);
         log.info("{}", cts.context());
         cts.context().start();
         cts.context().getRouteController().startAllRoutes();
         String testString = Double.toString(Math.random());
+        String fileInputUri = file(inputDir).getUri();
         cts.template().sendBodyAndHeader(fileInputUri, testString, Exchange.FILE_NAME, testFileName);
         File srcFile = new File(inputDir + File.separator + testFileName);
         assertTrue(srcFile.exists());

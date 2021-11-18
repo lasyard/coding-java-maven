@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring
+       http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <camelContext id="kafkaTest" xmlns="http://camel.apache.org/schema/spring">
+        <propertyPlaceholder id="properties">
+            <propertiesLocation resolver="classpath" path="kafka.properties"/>
+        </propertyPlaceholder>
+
+        <endpoint id="kafka-source" uri="kafka:test-camel-kafka">
+            <property key="brokers" value="{{bootstrap.servers}}"/>
+        </endpoint>
+
+        <route autoStartup="false">
+            <from uri="ref:kafka-source"/>
+            <to uri="mock:read-from-kafka"/>
+        </route>
+    </camelContext>
+
+</beans>

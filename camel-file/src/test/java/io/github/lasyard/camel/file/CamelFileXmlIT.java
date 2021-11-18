@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class CamelFileXmlIT extends CamelSpringTestSupport {
     @AfterEach
     public void tearDown() {
-        Helper.cleanUp();
+        CamelFileTestUtils.cleanUp();
     }
 
     @Override
@@ -21,6 +21,6 @@ public class CamelFileXmlIT extends CamelSpringTestSupport {
 
     @Test
     public void copyFilesTest() throws Exception {
-        Helper.testCopyFile(this);
+        CamelFileTestUtils.testCopyFile(this);
     }
 }

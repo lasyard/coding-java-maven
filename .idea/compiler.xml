@@ -28,8 +28,10 @@
         <module name="props" />
         <module name="annotation-runtime" />
         <module name="spark-app" />
+        <module name="kafka-admin" />
         <module name="hadoop-wc" />
         <module name="serdes" />
+        <module name="camel-kafka" />
         <module name="antlr4-array-init" />
         <module name="annotation-process" />
         <module name="flink-test-sink" />

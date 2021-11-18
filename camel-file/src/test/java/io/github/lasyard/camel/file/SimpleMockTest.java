@@ -19,7 +19,7 @@ public class SimpleMockTest extends CamelTestSupport {
     @Test
     public void testMock() throws Exception {
         getMockEndpoint("mock:result").expectedBodiesReceived("Hello World");
-        template.sendBody("direct:start", "Hello World");
+        template().sendBody("direct:start", "Hello World");
         assertMockEndpointsSatisfied();
     }
 }

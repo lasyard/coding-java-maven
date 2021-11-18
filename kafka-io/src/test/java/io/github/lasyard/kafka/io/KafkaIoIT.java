@@ -1,5 +1,6 @@
 package io.github.lasyard.kafka.io;
 
+import io.github.lasyard.kafka.admin.KafkaAdmin;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.kafka.clients.consumer.Consumer;
@@ -32,7 +33,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
 public class KafkaIoIT {
-    private static final KafkaAdmin admin = new KafkaAdmin(KafkaAdminIT.BOOTSTRAP_SERVERS);
+    private static final String BOOTSTRAP_SERVERS = "las1:9092";
+    private static final KafkaAdmin admin = new KafkaAdmin(BOOTSTRAP_SERVERS);
 
     private static String topic = null;
 

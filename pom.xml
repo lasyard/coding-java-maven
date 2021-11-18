@@ -71,6 +71,8 @@
         <module>flink-timer</module>
         <module>flink-common</module>
         <module>kafka-io</module>
+        <module>camel-kafka</module>
+        <module>kafka-admin</module>
     </modules>
 
     <properties>
@@ -114,6 +116,8 @@
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-io.version>2.11.0</commons-io.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
+        <!-- guava -->
+        <guava.version>31.0.1-jre</guava.version>
         <!-- facilities -->
         <lombok.version>1.18.22</lombok.version>
         <auto-service.version>1.0.1</auto-service.version>
@@ -249,6 +253,16 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
+                <artifactId>camel-endpointdsl</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-kafka</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
                 <artifactId>camel-test-junit5</artifactId>
                 <version>${camel.version}</version>
             </dependency>
@@ -355,6 +369,12 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+            <!-- guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <!-- facilities -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -428,6 +448,11 @@
             <dependency>
                 <groupId>io.github.lasyard</groupId>
                 <artifactId>flink-test-sink</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lasyard</groupId>
+                <artifactId>kafka-admin</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

@@ -13,7 +13,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kafka-io</artifactId>
+    <artifactId>kafka-admin</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -27,11 +27,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <scope>test</scope>
-        </dependency>
-        <!-- this project -->
-        <dependency>
-            <groupId>io.github.lasyard</groupId>
-            <artifactId>kafka-admin</artifactId>
         </dependency>
     </dependencies>
 

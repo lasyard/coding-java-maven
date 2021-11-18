@@ -1,4 +1,4 @@
-package io.github.lasyard.kafka.io;
+package io.github.lasyard.kafka.admin;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class KafkaAdminIT {
-    public static final String BOOTSTRAP_SERVERS = "las1:9092";
+    private static final String BOOTSTRAP_SERVERS = "las1:9092";
 
     @Test
     public void test() throws Exception {

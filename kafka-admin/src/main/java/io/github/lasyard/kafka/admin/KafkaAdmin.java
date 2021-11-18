@@ -1,4 +1,4 @@
-package io.github.lasyard.kafka.io;
+package io.github.lasyard.kafka.admin;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
