@@ -40,11 +40,10 @@ public class CamelKafkaPartitionIT extends CamelTestSupport {
                 from(kafka(topic).brokers(CamelKafkaTestUtils.BOOTSTRAP_SERVERS))
                     .noAutoStartup()
                     .process(exchange -> {
-                            for (Map.Entry<String, Object> entry : exchange.getIn().getHeaders().entrySet()) {
-                                log.info("{}: {}", entry.getKey(), entry.getValue().toString());
-                            }
+                        for (Map.Entry<String, Object> entry : exchange.getIn().getHeaders().entrySet()) {
+                            log.info("{}: {}", entry.getKey(), entry.getValue().toString());
                         }
-                    )
+                    })
                     .to(mock("read-from-kafka"));
             }
         };
