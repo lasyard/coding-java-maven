@@ -2,65 +2,33 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/annotation-process/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/annotation-process/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/annotation-processor/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/annotation-processor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/annotation-runtime/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/annotation-runtime/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/antlr4-array-init/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/antlr4-array-init/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/antlr4-simple-expr/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/antlr4-simple-expr/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/camel-file/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/camel-file/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/camel-kafka/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/camel-kafka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/curator-leader/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/curator-leader/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-cep/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-cep/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-dataset/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-dataset/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-sql/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-sql/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-streaming/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-streaming/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-test-sink/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-test-sink/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-timer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-timer/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hadoop-io/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hadoop-io/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop-notify/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop-notify/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop-wc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop-wc/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hbase-io/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hbase-io/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/i18n/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/i18n/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jackson/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackson/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-admin/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kafka-admin/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-io/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/kafka-io/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opencsv/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/opencsv/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/props/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/props/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-wc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-wc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quiz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serdes/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/serdes/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spark-app/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spark-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/utils/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/utils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zookeeper-watcher/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/zookeeper-watcher/src/main/resources" charset="UTF-8" />
   </component>
 </project>
