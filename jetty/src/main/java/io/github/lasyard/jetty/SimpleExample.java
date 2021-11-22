@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class SimpleExample extends AbstractHandler {
-    public static final int PORT = 8080;
+    private static final int PORT = 8080;
 
     public static void main(String[] args) throws Exception {
         Server server = new Server(PORT);

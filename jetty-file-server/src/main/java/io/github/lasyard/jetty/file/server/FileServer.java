@@ -4,7 +4,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 
 public final class FileServer {
-    public static final int PORT = 8080;
+    private static final int PORT = 8080;
 
     private FileServer() {
     }
