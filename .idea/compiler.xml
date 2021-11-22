@@ -17,6 +17,7 @@
         <module name="camel-file" />
         <module name="jackson" />
         <module name="kafka-io" />
+        <module name="jmx" />
         <module name="utils" />
         <module name="hadoop-notify" />
         <module name="hbase-io" />

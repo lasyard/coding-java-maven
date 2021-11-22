@@ -21,6 +21,8 @@
     <file url="file://$PROJECT_DIR$/hadoop-wc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop-wc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jackson/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jmx/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jmx/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-io/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-wc/src/main/java" charset="UTF-8" />

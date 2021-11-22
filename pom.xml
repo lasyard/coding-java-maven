@@ -74,6 +74,7 @@
         <module>camel-kafka</module>
         <module>kafka-admin</module>
         <module>kafka-wc</module>
+        <module>jmx</module>
     </modules>
 
     <properties>
@@ -123,6 +124,8 @@
         <lombok.version>1.18.22</lombok.version>
         <auto-service.version>1.0.1</auto-service.version>
         <javapoet.version>1.13.0</javapoet.version>
+        <!-- jmx -->
+        <jmxtools.version>1.2.1</jmxtools.version>
         <!-- testing -->
         <junit5.version>5.8.1</junit5.version>
         <assertj.version>3.21.0</assertj.version>
@@ -396,6 +399,12 @@
                 <groupId>com.squareup</groupId>
                 <artifactId>javapoet</artifactId>
                 <version>${javapoet.version}</version>
+            </dependency>
+            <!-- jmx -->
+            <dependency>
+                <groupId>com.sun.jdmk</groupId>
+                <artifactId>jmxtools</artifactId>
+                <version>${jmxtools.version}</version>
             </dependency>
             <!-- testing -->
             <dependency>
