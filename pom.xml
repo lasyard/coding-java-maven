@@ -75,6 +75,7 @@
         <module>kafka-admin</module>
         <module>kafka-wc</module>
         <module>jmx</module>
+        <module>jetty</module>
     </modules>
 
     <properties>
@@ -82,6 +83,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- jetty -->
+        <jetty.version>9.4.44.v20210927</jetty.version>
         <!-- hadoop -->
         <hadoop.version>3.3.1</hadoop.version>
         <!-- zookeeper -->
@@ -148,6 +151,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- jetty -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
             <!-- hadoop -->
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
