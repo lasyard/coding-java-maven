@@ -76,6 +76,7 @@
         <module>kafka-wc</module>
         <module>jmx</module>
         <module>jetty</module>
+        <module>jetty-file-server</module>
     </modules>
 
     <properties>

@@ -24,6 +24,7 @@
         <module name="hbase-io" />
         <module name="flink-timer" />
         <module name="quiz" />
+        <module name="jetty-file-server" />
         <module name="antlr4-simple-expr" />
         <module name="flink-common" />
         <module name="kafka-wc" />
