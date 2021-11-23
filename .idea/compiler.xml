@@ -15,6 +15,7 @@
         <module name="js" />
         <module name="flink-streaming" />
         <module name="camel-file" />
+        <module name="spring-web" />
         <module name="jackson" />
         <module name="kafka-io" />
         <module name="jmx" />

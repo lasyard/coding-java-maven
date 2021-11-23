@@ -1,7 +1,7 @@
 # spring-boot
 
 ```sh
-mvn spring-boot:run -pl spring_boot
+mvn spring-boot:run -pl spring-boot
 ```
 
 ```sh
