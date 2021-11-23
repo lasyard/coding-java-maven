@@ -10,6 +10,7 @@
         <module name="flink-cep" />
         <module name="flink-sql" />
         <module name="curator-leader" />
+        <module name="mybatis" />
         <module name="opencsv" />
         <module name="hadoop-io" />
         <module name="js" />

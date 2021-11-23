@@ -33,6 +33,8 @@
     <file url="file://$PROJECT_DIR$/kafka-io/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-wc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka-wc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quiz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/serdes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spark-app/src/main/java" charset="UTF-8" />

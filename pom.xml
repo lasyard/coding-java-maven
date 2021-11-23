@@ -82,6 +82,7 @@
         <module>spring-web</module>
         <module>spring-jdbc</module>
         <module>spring-data-jdbc</module>
+        <module>mybatis</module>
     </modules>
 
     <properties>
@@ -112,6 +113,9 @@
         <spring.version>5.3.12</spring.version>
         <!-- spring boot -->
         <spring-boot.version>2.6.0</spring-boot.version>
+        <!-- mybatis -->
+        <mybatis.version>3.5.7</mybatis.version>
+        <mybatis-spring-boot.version>2.2.0</mybatis-spring-boot.version>
         <!-- database -->
         <h2.version>1.4.200</h2.version>
         <!-- antlr4 -->
@@ -348,6 +352,22 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter-test</artifactId>
+                <version>${mybatis-spring-boot.version}</version>
             </dependency>
             <!-- database -->
             <dependency>
