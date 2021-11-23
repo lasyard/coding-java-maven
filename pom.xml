@@ -78,6 +78,7 @@
         <module>jetty</module>
         <module>jetty-file-server</module>
         <module>jetty-servlet</module>
+        <module>spring-boot</module>
     </modules>
 
     <properties>
@@ -86,6 +87,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!-- jetty -->
+        <!-- Java version of jetty (version > 9) is not Java 8. -->
         <jetty.version>9.4.44.v20210927</jetty.version>
         <!-- hadoop -->
         <hadoop.version>3.3.1</hadoop.version>
@@ -105,6 +107,8 @@
         <camel.version>3.13.0</camel.version>
         <!-- spring -->
         <spring.version>5.3.12</spring.version>
+        <!-- spring boot -->
+        <spring-boot.version>2.6.0</spring-boot.version>
         <!-- antlr4 -->
         <antlr4.version>4.9.3</antlr4.version>
         <!-- jackson -->
@@ -153,17 +157,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- jetty -->
-            <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-server</artifactId>
-                <version>${jetty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-servlet</artifactId>
-                <version>${jetty.version}</version>
-            </dependency>
             <!-- hadoop -->
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
@@ -296,6 +289,17 @@
                 <artifactId>camel-test-spring-junit5</artifactId>
                 <version>${camel.version}</version>
             </dependency>
+            <!-- jetty -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-servlet</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
             <!-- spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -306,6 +310,22 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <!-- spring boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jdbc</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
             <!-- antlr4 -->
             <dependency>
@@ -573,6 +593,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>${maven-assembly.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

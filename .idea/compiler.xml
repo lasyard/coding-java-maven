@@ -40,6 +40,7 @@
         <module name="antlr4-array-init" />
         <module name="annotation-process" />
         <module name="flink-test-sink" />
+        <module name="spring-boot" />
         <module name="flink-dataset" />
         <module name="annotation-processor" />
         <module name="zookeeper-watcher" />
