@@ -81,6 +81,7 @@
         <module>spring-boot</module>
         <module>spring-web</module>
         <module>spring-jdbc</module>
+        <module>spring-data-jdbc</module>
     </modules>
 
     <properties>
