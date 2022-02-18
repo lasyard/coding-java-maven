@@ -27,6 +27,7 @@
         <module name="flink-timer" />
         <module name="quiz" />
         <module name="jetty-file-server" />
+        <module name="jetty-servelet" />
         <module name="spring-data-jdbc" />
         <module name="antlr4-simple-expr" />
         <module name="jetty-servlet" />
