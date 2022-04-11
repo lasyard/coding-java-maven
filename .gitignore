@@ -14,10 +14,11 @@ dependency-reduced-pom.xml
 *.iml
 !.idea
 .idea/dictionaries/
-.idea/libraries/
 .idea/jarRepositories.xml
-.idea/uiDesigner.xml
+.idea/libraries/
 .idea/modules.xml
+.idea/runConfigurations.xml
+.idea/uiDesigner.xml
 
 # GitHub files
 !.github
