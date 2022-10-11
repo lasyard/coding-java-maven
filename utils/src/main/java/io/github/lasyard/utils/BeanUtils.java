@@ -1,12 +1,12 @@
 package io.github.lasyard.utils;
 
 import org.apache.commons.lang3.StringUtils;
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 import static java.lang.reflect.Modifier.isPublic;
 import static java.lang.reflect.Modifier.isStatic;
@@ -15,8 +15,7 @@ public final class BeanUtils {
     private BeanUtils() {
     }
 
-    @Nullable
-    public static Object getPropertyValue(@Nonnull Object obj, String propertyName) {
+    public static @Nullable Object getPropertyValue(@NonNull Object obj, String propertyName) {
         try {
             Field f = obj.getClass().getField(propertyName);
             if (isPublic(f.getModifiers()) && !isStatic(f.getModifiers())) {

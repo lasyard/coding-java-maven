@@ -1,10 +1,10 @@
 package io.github.lasyard.utils;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 
 import java.nio.charset.StandardCharsets;
-import javax.annotation.Nonnull;
 
 class FillBuffer implements Answer<Integer> {
     private final byte[] data;
@@ -14,7 +14,7 @@ class FillBuffer implements Answer<Integer> {
         data = null;
     }
 
-    FillBuffer(@Nonnull String data) {
+    FillBuffer(@NonNull String data) {
         this.data = data.getBytes(StandardCharsets.US_ASCII);
     }
 

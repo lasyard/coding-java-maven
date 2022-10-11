@@ -151,6 +151,7 @@
         <mockito.version>4.0.0</mockito.version>
         <!-- static check -->
         <jsr305.version>3.0.2</jsr305.version>
+        <checkerframework.version>3.26.0</checkerframework.version>
         <checkstyle.version>9.0.1</checkstyle.version>
         <!-- logging -->
         <slf4j.version>1.7.32</slf4j.version>
@@ -522,6 +523,11 @@
                 <artifactId>jsr305</artifactId>
                 <version>${jsr305.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.checkerframework</groupId>
+                <artifactId>checker-qual</artifactId>
+                <version>${checkerframework.version}</version>
+            </dependency>
             <!-- logging -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -582,8 +588,8 @@
         </dependency>
         <!-- static check -->
         <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
             <optional>true</optional>
         </dependency>
         <!-- logging -->

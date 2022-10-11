@@ -7,7 +7,6 @@ import org.apache.flink.api.java.typeutils.RowTypeInfo;
 import org.apache.flink.runtime.testutils.MiniClusterResourceConfiguration;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.table.api.Schema;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import org.apache.flink.test.util.MiniClusterWithClientResource;
@@ -195,12 +194,12 @@ public class FlinkSqlTest {
         ).assignTimestampsAndWatermarks(
             new AlwaysEmitStrategy<>(event -> (Long) event.get("ts"))
         );
-        Schema.Builder builder = Schema.newBuilder();
-        DataStream<Row> rowStream = in.map(FlinkSqlTest::eventToRow);
+        DataStream<Row> rowStream = in
+            .map(FlinkSqlTest::eventToRow)
+            .returns(new RowTypeInfo(schema.getTypes(), schema.getKeys()));
         // Though deprecated, this is the only way works here.
-        Table tbl = tblEnv.fromDataStream(in
-                .map(FlinkSqlTest::eventToRow)
-                .returns(new RowTypeInfo(schema.getTypes(), schema.getKeys())),
+        Table tbl = tblEnv.fromDataStream(
+            rowStream,
             $("type"),
             $("name"),
             $("ts"),

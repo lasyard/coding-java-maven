@@ -5,14 +5,12 @@ import lombok.RequiredArgsConstructor;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Iterator;
-import javax.annotation.Nonnull;
 
 @RequiredArgsConstructor
 public class BufferedReaderIterator implements Iterable<String> {
     private final BufferedReader reader;
 
     @Override
-    @Nonnull
     public Iterator<String> iterator() {
         return new Iterator<String>() {
             private String line;

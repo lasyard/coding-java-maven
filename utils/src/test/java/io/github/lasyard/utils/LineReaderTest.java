@@ -1,5 +1,6 @@
 package io.github.lasyard.utils;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +11,6 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
-import javax.annotation.Nonnull;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -34,12 +34,12 @@ public class LineReaderTest {
         mock.close();
     }
 
-    private void assertRead(@Nonnull LineReader lineReader, String test) throws IOException {
+    private void assertRead(@NonNull LineReader lineReader, String test) throws IOException {
         String str = lineReader.readLine(mockFile, StandardCharsets.US_ASCII);
         assertThat(str).isEqualTo(test);
     }
 
-    private void assertEof(@Nonnull LineReader lineReader) throws IOException {
+    private void assertEof(@NonNull LineReader lineReader) throws IOException {
         ByteBuffer byteBuffer = lineReader.readLine(mockFile);
         assertNull(byteBuffer);
     }

@@ -1,12 +1,12 @@
 package io.github.lasyard.jetty.servlet;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.annotation.Nonnull;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,7 +31,7 @@ public class ServletExample extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest request, @Nonnull HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, @NonNull HttpServletResponse response) throws IOException {
         response.setContentType("text/html; charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         PrintWriter out = response.getWriter();

@@ -3,10 +3,10 @@ package io.github.lasyard.camel.file;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.test.junit5.CamelTestSupport;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.io.File;
 import java.util.ResourceBundle;
-import javax.annotation.Nonnull;
 
 import static org.apache.camel.builder.endpoint.StaticEndpointBuilders.file;
 import static org.apache.camel.test.junit5.TestSupport.deleteDirectory;
@@ -30,7 +30,7 @@ final class CamelFileTestUtils {
         log.info(outputDir + " deleted.");
     }
 
-    static void testCopyFile(@Nonnull CamelTestSupport cts) throws Exception {
+    static void testCopyFile(@NonNull CamelTestSupport cts) throws Exception {
         log.info("{}", cts.context());
         cts.context().start();
         cts.context().getRouteController().startAllRoutes();

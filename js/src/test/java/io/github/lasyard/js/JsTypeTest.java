@@ -2,6 +2,7 @@ package io.github.lasyard.js;
 
 import jdk.nashorn.api.scripting.ScriptObjectMirror;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,6 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.stream.Stream;
-import javax.annotation.Nonnull;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -23,8 +23,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class JsTypeTest {
     private static Invocable invocable = null;
 
-    @Nonnull
-    public static Stream<Arguments> getArguments() {
+    public static @NonNull Stream<Arguments> getArguments() {
         return Stream.of(
             arguments("test", "string", "java.lang.String"),
             arguments(1, "number", "java.lang.Integer"),

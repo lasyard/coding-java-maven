@@ -1,13 +1,12 @@
 package io.github.lasyard.utils;
 
-import javax.annotation.Nonnull;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 public final class StringUtils {
     private StringUtils() {
     }
 
-    @Nonnull
-    public static String uppercaseFirst(@Nonnull String str) {
+    public static @NonNull String uppercaseFirst(@NonNull String str) {
         return Character.toUpperCase(str.charAt(0)) + str.substring(1);
     }
 }

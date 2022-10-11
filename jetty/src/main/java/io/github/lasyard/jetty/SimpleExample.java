@@ -1,12 +1,12 @@
 package io.github.lasyard.jetty;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.annotation.Nonnull;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -23,9 +23,9 @@ public class SimpleExample extends AbstractHandler {
     @Override
     public void handle(
         String target,
-        @Nonnull Request baseRequest,
+        @NonNull Request baseRequest,
         HttpServletRequest request,
-        @Nonnull HttpServletResponse response
+        @NonNull HttpServletResponse response
     ) throws IOException {
         response.setContentType("text/html; charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);

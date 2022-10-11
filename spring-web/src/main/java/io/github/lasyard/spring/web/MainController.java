@@ -1,11 +1,10 @@
 package io.github.lasyard.spring.web;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.annotation.Nonnull;
 
 @Controller
 public class MainController {
@@ -14,7 +13,7 @@ public class MainController {
     private static int counter = 0;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(@Nonnull Model model) {
+    public String index(@NonNull Model model) {
         model.addAttribute("counter", counter++);
         return VIEW_INDEX;
     }

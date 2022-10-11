@@ -6,11 +6,11 @@ import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
-import javax.annotation.Nonnull;
 
 @Slf4j
 public class ZookeeperWatcher implements Runnable, Watcher {
@@ -22,7 +22,7 @@ public class ZookeeperWatcher implements Runnable, Watcher {
         zooKeeper = new ZooKeeper("las1:2181", 3000, this);
     }
 
-    private static void logStat(@Nonnull Stat stat) {
+    private static void logStat(@NonNull Stat stat) {
         log.info("Stat of node:");
         log.info("Czxid = {}", stat.getCzxid());
         log.info("Mzxid = {}", stat.getMzxid());
@@ -57,7 +57,7 @@ public class ZookeeperWatcher implements Runnable, Watcher {
     }
 
     @Override
-    public void process(@Nonnull WatchedEvent event) {
+    public void process(@NonNull WatchedEvent event) {
         log.info("Event received.");
         Event.KeeperState state = event.getState();
         log.info("Event state: {}.", state);

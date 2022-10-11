@@ -1,20 +1,19 @@
 package io.github.lasyard.quiz;
 
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
-import javax.annotation.Nonnull;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @Slf4j
 public class CalcBitsTest {
-    @Nonnull
-    private static Stream<Arguments> getArguments() {
+    private static @NonNull Stream<Arguments> getArguments() {
         return Stream.of(
             arguments(0, 0),
             arguments(1, 1),

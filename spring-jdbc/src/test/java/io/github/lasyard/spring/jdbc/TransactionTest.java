@@ -1,6 +1,7 @@
 package io.github.lasyard.spring.jdbc;
 
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,6 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Nonnull;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -35,8 +35,7 @@ public class TransactionTest {
         readInTx1 = false;
     }
 
-    @Nonnull
-    private List<String> runTest(int isolationLevel) {
+    private @NonNull List<String> runTest(int isolationLevel) {
         DefaultTransactionDefinition def = new DefaultTransactionDefinition();
         def.setName("TxTest");
         def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);

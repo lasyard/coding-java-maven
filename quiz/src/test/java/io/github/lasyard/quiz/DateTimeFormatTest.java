@@ -1,5 +1,6 @@
 package io.github.lasyard.quiz;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -14,14 +15,12 @@ import java.time.temporal.TemporalAccessor;
 import java.util.Date;
 import java.util.TimeZone;
 import java.util.stream.Stream;
-import javax.annotation.Nonnull;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class DateTimeFormatTest {
-    @Nonnull
-    public static Stream<Arguments> getCaseForDateParse() {
+    public static @NonNull Stream<Arguments> getCaseForDateParse() {
         return Stream.of(
             arguments("yyyyMMdd", "19700101", new Date(0)),
             arguments("y-M-d", "1970-1-1", new Date(0)),
@@ -34,8 +33,7 @@ public class DateTimeFormatTest {
         );
     }
 
-    @Nonnull
-    public static Stream<Arguments> getCaseForDateParseFailInDateTimeFormatter() {
+    public static @NonNull Stream<Arguments> getCaseForDateParseFailInDateTimeFormatter() {
         return Stream.of(
             arguments("yyyy-MM-dd", "1970-1-1", new Date(0)),
             arguments("y-M-d", "70-1-1", new Date(0)),
@@ -44,22 +42,19 @@ public class DateTimeFormatTest {
         );
     }
 
-    @Nonnull
-    public static Stream<Arguments> getCaseForDateParseFailInSimpleDateTimeFormat() {
+    public static @NonNull Stream<Arguments> getCaseForDateParseFailInSimpleDateTimeFormat() {
         return Stream.of(
             arguments("yy-M-d", "70-1-1", new Date((100L * 365L + 25L) * 24L * 60L * 60L * 1000L))
         );
     }
 
-    @Nonnull
-    public static Stream<Arguments> getCaseForDateParseInvalid() {
+    public static @NonNull Stream<Arguments> getCaseForDateParseInvalid() {
         return Stream.of(
             arguments("yyyy-MM-dd", "1970-02-30", new Date(60L * 24L * 60L * 60L * 1000L))
         );
     }
 
-    @Nonnull
-    public static Stream<Arguments> getCaseForDateParseOnlyInDateTimeFormatterSmart() {
+    public static @NonNull Stream<Arguments> getCaseForDateParseOnlyInDateTimeFormatterSmart() {
         return Stream.of(
             arguments("yyyy-MM-dd", "1970-02-30", new Date(58L * 24L * 60L * 60L * 1000L))
         );
@@ -125,7 +120,7 @@ public class DateTimeFormatTest {
         "getCaseForDateParse",
         "getCaseForDateParseFailInSimpleDateTimeFormat",
     })
-    public void testDateTimeFormatterStrict(@Nonnull String format, String str, Date result) {
+    public void testDateTimeFormatterStrict(@NonNull String format, String str, Date result) {
         // In java 8, `u` is year and `y` is year of era.
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern(format.replace('y', 'u'))
             .withResolverStyle(ResolverStyle.STRICT);

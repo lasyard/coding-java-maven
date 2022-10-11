@@ -1,10 +1,11 @@
 package io.github.lasyard.utils;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
+
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
-import javax.annotation.Nonnull;
 
 public class LineReader {
     private final byte[] buffer;
@@ -84,7 +85,7 @@ public class LineReader {
         }
     }
 
-    public String stringify(@Nonnull ByteBuffer byteBuffer, Charset charset) {
+    public String stringify(@NonNull ByteBuffer byteBuffer, Charset charset) {
         return new String(
             byteBuffer.array(),
             byteBuffer.arrayOffset() + byteBuffer.position(),

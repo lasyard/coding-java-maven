@@ -1,9 +1,8 @@
 package io.github.lasyard.spring.jdbc;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.transaction.PlatformTransactionManager;
-
-import javax.annotation.Nonnull;
 
 final class DaoFactory {
     private static final ClassPathXmlApplicationContext ctx;
@@ -17,13 +16,11 @@ final class DaoFactory {
     private DaoFactory() {
     }
 
-    @Nonnull
-    static ModelDao getModelDao() {
+    static @NonNull ModelDao getModelDao() {
         return (ModelDao) ctx.getBean("modelDao");
     }
 
-    @Nonnull
-    static PlatformTransactionManager getTxManager() {
+    static @NonNull PlatformTransactionManager getTxManager() {
         return (PlatformTransactionManager) ctx.getBean("txManager");
     }
 }

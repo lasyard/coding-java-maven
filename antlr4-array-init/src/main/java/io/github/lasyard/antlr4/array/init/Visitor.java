@@ -1,10 +1,10 @@
 package io.github.lasyard.antlr4.array.init;
 
-import javax.annotation.Nonnull;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 class Visitor extends ArrayInitBaseVisitor<Node> {
     @Override
-    public ArrayNode visitInit(@Nonnull ArrayInitParser.InitContext ctx) {
+    public ArrayNode visitInit(ArrayInitParser.@NonNull InitContext ctx) {
         ArrayNode array = new ArrayNode(ctx.value().size());
         int i = 0;
         for (ArrayInitParser.ValueContext valueContext : ctx.value()) {
@@ -14,7 +14,7 @@ class Visitor extends ArrayInitBaseVisitor<Node> {
     }
 
     @Override
-    public Node visitValue(@Nonnull ArrayInitParser.ValueContext ctx) {
+    public Node visitValue(ArrayInitParser.@NonNull ValueContext ctx) {
         if (ctx.init() != null) {
             return visitInit(ctx.init());
         } else if (ctx.INT() != null) {

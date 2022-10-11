@@ -1,5 +1,6 @@
 package io.github.lasyard.spring.jdbc;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -10,7 +11,6 @@ import java.sql.PreparedStatement;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
-import javax.annotation.Nonnull;
 
 class ModelDaoJdbc extends JdbcDaoSupport implements ModelDao {
     private static final String TABLE_NAME = "tbl_model";
@@ -23,7 +23,7 @@ class ModelDaoJdbc extends JdbcDaoSupport implements ModelDao {
     };
 
     @Override
-    public int insert(@Nonnull Model model) {
+    public int insert(Model model) {
         String sql = "insert into " + TABLE_NAME + "(name) values(?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
         Objects.requireNonNull(getJdbcTemplate()).update(connection -> {
@@ -35,7 +35,7 @@ class ModelDaoJdbc extends JdbcDaoSupport implements ModelDao {
     }
 
     @Override
-    public int update(@Nonnull Model model) {
+    public int update(@NonNull Model model) {
         String sql = "update " + TABLE_NAME + " set name = ? where id = ?";
         return Objects.requireNonNull(getJdbcTemplate()).update(sql, model.getName(), model.getId());
     }
