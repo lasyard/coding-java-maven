@@ -13,12 +13,15 @@ dependency-reduced-pom.xml
 # IntelliJ IDEA files
 *.iml
 !.idea
+.idea/compiler.xml
 .idea/dictionaries/
+.idea/encodings.xml
 .idea/jarRepositories.xml
 .idea/libraries/
 .idea/modules.xml
 .idea/runConfigurations.xml
 .idea/uiDesigner.xml
+.idea/vcs.xml
 
 # GitHub files
 !.github
