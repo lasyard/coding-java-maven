@@ -4,3 +4,5 @@
 
 This project contains miscellaneous coding work of mine, in java language and managed
 by [Apache Maven](http://maven.apache.org/).
+
+MIT License: <http://lasy.great-site.net/mit_license>.
